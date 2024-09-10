@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: #000000;
+    background: linear-gradient(45deg, #111, #222, #111);
+    background-size: 400% 400%;
+    animation: neon 15s ease infinite;
+    line-height: 1.6;
+}
+
+@keyframes neon {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #00ff99;
+    margin-right: 0.5rem;
+}
+
+header {
+    background: #121212;
+    color: #e0e0e0;
+    padding: 1rem 2rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #444;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    color: #00ff99;
+}
+
+main {
+    padding: 2rem 2rem 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #00ff99;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
+}
+
+p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    background: #121212;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #444;
+}
+
+button, .button {
+    background: #00ff99;
+    color: #121212;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover, .button:hover {
+    background: #00cc77;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.8);
+}
+
+#projects {
+    background-color: #1b1b1b;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+    padding: 1rem;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 153, 0.7);
+}
+
+.project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 0.5rem;
+    border: 1px solid #444;
+    transition: transform 0.3s;
+}
+
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #00ff99;
+    text-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
+}
+
+.project p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.project a{
+    text-decoration: none;
+}
+footer a{
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .button, button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+#about {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ff99;
+    text-align: center;
+
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+#contact {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ff99;
+}
+
+.contact-list {
+    list-style: none;
+    text-align: start;
+}
+
+.contact-list li {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.contact-list a {
+    color: #00ff99;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}

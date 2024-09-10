@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f9f6f0;
+            color: #333;
+            padding: 1em 0;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        main {
+            padding: 2em 1em;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 2em;
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+        }
+
+        .project {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(50% - 1.5em);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project h3 {
+            font-size: 1.5em;
+            margin: 1em;
+            color: #333;
+        }
+
+        .project p {
+            margin: 0 1em 1em;
+            color: #666;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em 1em;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #f9f6f0;
+            color: #333;
+            text-align: center;
+            padding: 1em 0;
+            border-top: 2px solid #ddd;
+        }
+
+        .icon {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            display: inline-block;
+        }
+
+        .icon:hover {
+            color: #0056b3;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to My Portfolio</h1>
+            <p>This is where you can learn more about me and my work.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <article class="project">
+                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*nKwTzz9reh_ZKetC.jpeg" alt="Project 1">
+                    <h3>AES Encryption Modules</h3>
+                    <p>Design and development of AES encryption modules in Verilog HDL, supporting AES128, AES192, and AES256.</p>
+                    <a href="https://github.com/KarimZakzouk/AES" class="button" target="_blank">View Project</a>
+                </article>
+                
+                <article class="project">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*NBbGgfSrfimwxjuTuykCuw.jpeg" alt="Folder Monitor">
+                    <h3>Folder Monitor with Node.js</h3>
+                    <p>Node.js app for real-time folder monitoring, tracking file changes.</p>
+                    <a href="https://github.com/KarimZakzouk/folder-monitor" class="button" target="_blank">View Project</a>
+                </article>
+                        
+                <article class="project">
+                    <img src="https://static.vecteezy.com/system/resources/previews/002/773/323/non_2x/alien-invasion-on-earth-with-ufo-mothership-concept-free-vector.jpg" alt="Alien Invasion">
+                    <h3>Alien Invasion Simulation</h3>
+                    <p>Simulates a game with an input file, showcasing game logic and interactions.</p>
+                    <a href="https://github.com/abdullahelnoory/Aliens-Invasion-Project" class="button" target="_blank">View Project</a>
+                </article>
+                
+                <article class="project">
+                    <img src="https://c1.wallpaperflare.com/preview/594/264/867/globe-our-earth-continents-countries.jpg" alt="Countries Website">
+                    <h3>Interactive Countries Website</h3>
+                    <p>Dynamic website providing comprehensive country details with an intuitive interface.</p>
+                    <a href="https://github.com/KarimZakzouk/WebProject.github.io" class="button" target="_blank">View Project</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.linkedin.com/in/mazen-hassan-7abb852aa/" class="icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Uderscore" class="icon"><i class="fab fa-github"></i></a>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
